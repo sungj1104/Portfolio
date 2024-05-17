@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+  <head>
+    <title>TODO 목록 앱</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap.min.css 적용 -->>
+    <link rel="stylesheet" href="{% static 'bootstrap-icons.css' %}"><!-- bootstrap-icons.css 적용 -->
+  </head>
+  <body>
+  <div class="container">
+    <h1>TODO 상세보기</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{todo.title}}<!-- todo 제목 --></h5>
+              </h5>
+              <p class="card-text">{{todo.description}}<!-- todo 내용 --></p>
+              <a href="{% url 'todos:todo' %}" class="btn btn-primary">목록으로</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </div>
+</html>
