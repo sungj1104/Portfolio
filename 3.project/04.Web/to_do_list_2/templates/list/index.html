@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do</title>
+    </head>
+    <body>
+        <h1>To-do List <small>with Django</small></h1>
+        <form action="./create/" method="POST">{% csrf_token %}
+            <input name="create" type="text" placeholder="강민주 바보">
+            <button type="submit">메모하기!</button>
+        </form>
+        <div>
+            {% for i in text %}
+            <div>
+                <a>{{i.id}}. {{ i.content }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
