@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+    <title>{{bb.title}} - Blog</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'blog:index' %}">Blog</a>
+    </nav>
+    <h1>{{bb.title}}</h1>
+    <h4>{{bb.created_at}}</h4>
+    <a>{{bb.content}}</a>
+    <hr />
+</body>
